@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+
+body {
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+label {
+    width: 236px;
+    height: 102px;
+    display: block;
+    position: relative;
+    background-color: var(--label);
+    border-radius: 59px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+label:after {
+    content: "";
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.7s;
+    z-index: 101;
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label:after {
+    left: 140px;
+    transform: translateX(-100);
+    transition: .7s;
+}
+
+.background {
+    width: 100vh;
+    height: 100vh;
+    background-color: var(--light);
+    z-index: -1;
+    position: absolute;
+    transition: 0.7s;
+}
+
+label svg {
+    position: absolute;
+    width: 107px;
+    top: 10px;
+    z-index: 100;
+
+}
+
+label svg.sun {
+    left: 130px;
+    fill: #fff;
+    transition: 0.3s;
+}
+
+
+label svg.moon {
+    
+    fill: #fff;
+    transition: 0.3s;
+}
+
+
+.light {
+    background-color: var(--light);
+}
+
+.dark {
+    background-color: var(--dark);
+}
