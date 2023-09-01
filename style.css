@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--light);
 }
 
 
@@ -85,10 +86,6 @@ label svg.moon {
     transition: 0.3s;
 }
 
-
-.light {
-    background-color: var(--light);
-}
 
 .dark {
     background-color: var(--dark);
